@@ -1,0 +1,40 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/api/Customer",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "customerwebapi",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Customer"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Customer/{customerId}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "customerwebapi",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Car"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Car",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "customerwebapi",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Car"
+    }
+  ]
+}
